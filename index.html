@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+    <title>Tailwind project</title>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navbar  -->
+    <nav class="p-3 flex justify-between items-center bg-white">
+        <a href="#" id="brand" class="flex gap-2 items-center">
+            <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Navbar logo">
+            <span class="text-lg font-medium font-poppins">Digiphysio</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="#" class="font-medium hover:text-primary">About</a>
+            <a href="#" class="font-medium hover:text-primary">Pricing</a>
+            <a href="#" class="font-medium hover:text-primary">Changelog</a>
+            <a href="#" class="font-medium hover:text-primary">Blogs</a>
+            <a href="#" class="font-medium hover:text-primary">Login</a>
+        </div>
+         <button class="hidden lg:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600 hover:-translate-y-1 transition group"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
+            <img src="assets/asset 1.svg" alt="">
+            <span>Consult doctors</span>
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+        </button>
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- Nav dialog  -->
+        <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3 md:hidden">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Navbar logo">
+                    <span class="text-lg font-medium font-poppins">Digiphysio</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+            <a href="#" class="font-medium hover:text-primary block m-3 p-3">About</a>
+            <a href="#" class="font-medium hover:text-primary block m-3 p-3">Pricing</a>
+            <a href="#" class="font-medium hover:text-primary block m-3 p-3">Changelog</a>
+            <a href="#" class="font-medium hover:text-primary block m-3 p-3">Blogs</a>
+            <a href="#" class="font-medium hover:text-primary block m-3 p-3">Login</a>
+            </div>
+            <div class="h-[1px] bg-gray-300"></div>
+            <button class="ml-5 mt-6 flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
+                <img src="assets/asset 1.svg" alt="">
+                <span>Consult Doctors</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Main  -->
+     <div id="hero" class="min-h-screen bg-gradient-to-b from-purple-100 via-orange-100 to-transparent">
+        <div id="hero-container" class="max-w-4xl mx-auto px-6 pb-32 flex flex-col sm:items-center sm:text-center">
+            <div id="version-text" class="h-8 flex gap-2 items-center border border-yellow-600 bg-yellow-50 rounded-lg px-3 py-1 w-fit mt-10 mb-10 shadow-md hover:shadow-lg hover:-translate-y-1 transition cursor-pointer group">
+                <div class="h-2 w-2 border border-yellow-700 rounded-full bg-yellow-300 my-6"></div>
+                <p class="text-yellow-600"><span class="text-yellow-500">v0.21.1:</span> Explore new features!</p>
+                <i class="text-yellow-500 fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+            </div>
+
+            <div id="hero-features" class="hidden sm:flex gap-5 mt-3">
+                <div class="flex items-center">
+                    <i class="fa-regular fa-file-code px-2"></i>
+                    <p>Virtual Consultations</p>
+                </div>
+                <div class="flex items-center">
+                    <i class="fa-regular fa-hand-back-fist px-2"></i>
+                    <p>Progress tracking</p>
+                </div>
+                <div class="flex items-center">
+                    <i class="fa-solid fa-laptop px-2"></i>
+                    <p>Windows, Mac, Linux</p>
+                </div>
+            </div>
+
+
+            <h1 class="text-gray-800 sm:mt-14 text-6xl font-semibold font-poppins">Innovative <span class="bg-blue-400 rounded-lg leading-snug">Physiotherapy</span> at Your Fingertips</h1>
+            <p class="text-3xl mt-4 text-gray-800">Personalized physiotherapy plans tailored to your needs. Start your journey to a pain-free, active life today</p>
+            <div id="buttons-container" class="flex flex-col sm:flex-row mt-8">
+                <button class="text-white text-xl py-3 px-6 mx-5 my-2 border border-black rounded-xl bg-blue-700 hover:-translate-y-1 hover:bg-blue-800 transition">Book now</button>
+                <button class="text-xl py-3 px-6 my-2 mx-5 border border-black rounded-xl bg-white hover:-translate-y-1 transition">View doctors</button>
+            </div>
+        </div>
+        <div id="companies-container" class="flex flex-col gap-8">
+            <div id="companies-title" class="flex justify-center gap-6">
+                <img src="./assets/asset 2.svg" class="translate-y-2" alt="">
+                <span class="font-medium">SPONSORED BY</span>
+                <img src="./assets/asset 2.svg" class="translate-y-2 transform scale-x-[-1]" alt="">
+            </div>
+            <div id="companies-lines-group" class="flex flex-col gap-3">
+                <!-- Line1  -->
+                <div id="line1" class="flex gap-4 w-screen -translate-x-48">
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 10.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 11.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 12.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 13.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 14.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 15.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 16.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 17.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 18.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 19.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 20.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 21.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                </div>
+                <!-- Line2  -->
+                <div id="line2" class="flex gap-4 w-screen -translate-x-36">
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 3.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 4.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 5.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 6.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 7.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 8.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 9.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 10.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 11.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 12.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 13.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400 md:min-h-32 md:min-w-32">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 14.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                </div>
+                <!-- Line3  -->
+                <div id="line3" class="md:hidden flex gap-4 w-screen -translate-x-48">
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 22.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 23.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 24.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 25.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 26.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 17.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 18.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 19.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 20.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 21.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 22.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center min-h-24 min-w-24 rounded-xl bg-white border border-gray-400">
+                        <img class="h-12 w-12 md:h-16 md:w-16" src="./assets/asset 23.png" alt="">
+                        <span class="text-[12px] md:text-[16px] font-semibold">Activeflex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-- steps  -->
+      <div id="steps" class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32">
+        <h2 class="text-5xl sm:font-semibold mb-12">How it works</h2>
+        <div class="rounded-xl border border-gray-400 py-12 px-8 flex flex-col">
+            <div class="flex flex-col gap-6">
+                <span class="border border-yellow-300 bg-yellow-100 w-fit rounded-lg px-3 py-1 text-yellow-800 font-medium">Step 1</span>
+                <h3 class="text-4xl">Book straight from wesbite</h3>
+            </div>
+        </div>
+      </div>
+     <div class="h-[1000px]"></div>
+      
+</body>
+<script src="script.js"></script>
+</html>
