@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="output.css">
     <title>Tailwind project</title>
 </head>
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden scroll-smooth">
     <!-- Navbar  -->
     <nav class="p-3 flex justify-between items-center bg-white">
         <a href="#" id="brand" class="flex gap-2 items-center">
             <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Navbar logo">
-            <span class="text-lg font-medium font-poppins">Digiphysio</span>
+            <span class="text-lg font-medium font-poppins">Physiofit</span>
         </a>
         <div id="nav-menu" class="hidden lg:flex gap-12">
-            <a href="#" class="font-medium hover:text-primary">About</a>
-            <a href="#" class="font-medium hover:text-primary">Exercises</a>
+            <a href="index.html" class="font-medium hover:text-primary">Home</a>
+            <a href="#steps" class="font-medium hover:text-primary">Exercises</a>
             <!-- <a href="#" class="font-medium hover:text-primary">Changelog</a> -->
-            <a href="#" class="font-medium hover:text-primary">Signup</a>
-            <a href="#" class="font-medium hover:text-primary">Signin</a>
+            <a href="signup.html" class="font-medium hover:text-primary">Signup</a>
+            <a href="signup.html" class="font-medium hover:text-primary">Signin</a>
         </div>
          <button class="hidden lg:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600 hover:-translate-y-1 transition group"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
             <img src="assets/asset 1.svg" alt="">
@@ -42,11 +42,11 @@
                 </button>
             </div>
             <div class="mt-6">
-            <a href="#" class="font-medium hover:text-primary block m-3 p-3">About</a>
-            <a href="#" class="font-medium hover:text-primary block m-3 p-3">Exercises</a>
+            <a href="index.html" class="font-medium hover:text-primary block m-3 p-3">Home</a>
+            <a href="#steps" class="font-medium hover:text-primary block m-3 p-3">Exercises</a>
             <!-- <a href="#" class="font-medium hover:text-primary block m-3 p-3">Changelog</a> -->
-            <a href="#" class="font-medium hover:text-primary block m-3 p-3">Signup</a>
-            <a href="#" class="font-medium hover:text-primary block m-3 p-3">Signin</a>
+            <a href="signup.html" class="font-medium hover:text-primary block m-3 p-3">Signup</a>
+            <a href="signup.html" class="font-medium hover:text-primary block m-3 p-3">Signin</a>
             </div>
             <div class="h-[1px] bg-gray-300"></div>
             <button class="ml-5 mt-6 flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
@@ -84,8 +84,8 @@
             <h1 class="text-gray-800 sm:mt-14 text-6xl font-semibold font-poppins">Innovative <span class="bg-blue-400 rounded-lg leading-snug">Physiotherapy</span> at Your Fingertips</h1>
             <p class="text-3xl mt-4 text-gray-800">Personalized physiotherapy plans tailored to your needs. Start your journey to a pain-free, active life today</p>
             <div id="buttons-container" class="flex flex-col sm:flex-row mt-8">
-                <button class="text-white text-xl py-3 px-6 mx-5 my-2 border border-black rounded-xl bg-blue-700 hover:-translate-y-1 hover:bg-blue-800 transition">Book now</button>
-                <button class="text-xl py-3 px-6 my-2 mx-5 border border-black rounded-xl bg-white hover:-translate-y-1 transition">View doctors</button>
+                <button class="text-white text-xl py-3 px-6 mx-5 my-2 border border-black rounded-xl bg-blue-700 hover:-translate-y-1 hover:bg-blue-800 transition"><a href="#steps">Start Therapy</a></button>
+                <button class="text-xl py-3 px-6 my-2 mx-5 border border-black rounded-xl bg-white hover:-translate-y-1 transition"><a href="signup.html">Signup</a></button>
             </div>
         </div>
         <div id="companies-container" class="flex flex-col gap-8">
@@ -257,109 +257,51 @@
         <!-- step1  -->
         <div class="rounded-xl border border-gray-400 bg-purple-50 py-12 px-8 flex flex-col md:flex-row">
             <div class="flex flex-col gap-6">
-                <span class="border border-yellow-300 bg-yellow-100 w-fit rounded-lg px-3 py-1 text-yellow-800 font-medium">Step 1</span>
-                <h3 class="text-4xl">Book straight from wesbite</h3>
-                <p class="text-xl font-light">Pain Relief and Recovery with the best physiotherapy near you. ReLiva has a team of experienced and expert physiotherapists to keep you ahead</p>
+                <span class="border border-yellow-300 bg-yellow-100 w-fit rounded-lg px-3 py-1 text-yellow-800 font-medium">1</span>
+                <h3 class="text-4xl">Slip Disc</h3>
+                <p class="text-xl font-light">A slip disc, also known as a herniated or ruptured disc, happens when one of the soft, cushion-like discs between the bones in your spine gets damaged. These discs act like shock absorbers, helping your spine move smoothly.
+
+                    When a disc "slips," it means the inner jelly-like part of the disc has pushed out through a crack in the tougher outer layer. This can put pressure on nearby nerves, leading to discomfort.</p>
                 <ul class="grid grid-cols-2 gap-2">
                     <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
+                        <i class="fa-solid fa-person-running"></i>
+                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="slipdisc.html">Start Therapy</a>
                     </li>
                 </ul>
             </div>
-            <div class="pt-12">
-                <img class="border rounded-xl" src="assets/phy1.webp" alt="">
+            <div class="pt-12 ml-4">
+                <img class="border rounded-xl w-[1600px] h-[300px]" src="assets/slipdiscimg.jpg" alt="">
             </div>
         </div>
         <!-- step2  -->
         <div class="rounded-xl border border-gray-400 bg-purple-50 py-12 px-8 flex flex-col md:flex-row">
             <div class="flex flex-col gap-6">
-                <span class="border border-yellow-300 bg-yellow-100 w-fit rounded-lg px-3 py-1 text-yellow-800 font-medium">Step 2</span>
+                <span class="border border-yellow-300 bg-yellow-100 w-fit rounded-lg px-3 py-1 text-yellow-800 font-medium">2</span>
                 
                 <h3 class="text-4xl">Book straight from wesbite</h3>
                 <p class="text-xl font-light">Pain Relief and Recovery with the best physiotherapy near you. ReLiva has a team of experienced and expert physiotherapists to keep you ahead</p>
                 <ul class="grid grid-cols-2 gap-2">
                     <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
+                        <i class="fa-solid fa-person-running"></i>
+                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="sports.html">Start Therapy</a>
                     </li>
                 </ul>
             </div>
             <div class="pt-12">
-                <img class="border rounded-xl" src="assets/phy1.webp" alt="">
+                <img class="border rounded-xl w-[626px] h-[250px]" src="assets/soprtsimg.jpeg" alt="">
             </div>
         </div>
         <!-- step3  -->
         <div class="rounded-xl border border-gray-400 bg-purple-50 py-12 px-8 flex flex-col md:flex-row">
             <div class="flex flex-col gap-6">
-                <span class="border border-yellow-300 bg-yellow-100 w-fit rounded-lg px-3 py-1 text-yellow-800 font-medium">Step 3</span>
+                <span class="border border-yellow-300 bg-yellow-100 w-fit rounded-lg px-3 py-1 text-yellow-800 font-medium">3</span>
                 
                 <h3 class="text-4xl">Book straight from wesbite</h3>
                 <p class="text-xl font-light">Pain Relief and Recovery with the best physiotherapy near you. ReLiva has a team of experienced and expert physiotherapists to keep you ahead</p>
                 <ul class="grid grid-cols-2 gap-2">
                     <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <i class="fa-solid fa-check"></i>
-                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="">Digiphysio</a>
+                        <i class="fa-solid fa-person-running"></i>
+                        <a class="text-lg font-light border-b border-black border-opacity-20 hover:border-opacity-40" href="osteo.html">Start Therapy</a>
                     </li>
                 </ul>
             </div>
@@ -371,18 +313,303 @@
      <!-- Bento Grid  -->
       <div id="bento-grid" class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32">
         <h2 class="text-5xl sm:font-semibold mb-14">Our features</h2>
-        <div id="grid-container" class="flex flex-col gap-6">
-            <div class="rounded-2xl bg-red-500 p-[1px]">
-                <div class="rounded-2xl bg-white w-full h-full p-6 flex flex-col items-center">
-                    <h3 >Native Notifications</h3>
-                    <img src="./assets/asset 28.png" alt="">
-
+        <div id="grid-container" class="flex flex-col gap-6 md:grid md:grid-cols-3" style="grid: auto rows 96px;">
+            <div class="row-start-1 row-end-3 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white w-full h-full p-6 flex flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50 cursor-pointer">
+                    <h3 class="text-2xl mb-3">Native Notifications</h3>
+                    <img src="./assets/asset 31.png" alt="">
                 </div>
             </div>
+            <div class="row-start-1 row-end-4 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white w-full h-full p-6 flex flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50 cursor-pointer">
+                    <h3 class="text-2xl mb-3">Native Notifications</h3>
+                    <p class="text-lg text-center font-light mb-3">We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.</p>
+                    <img src="./assets/asset 30.png" alt="">
+                </div>
+            </div>
+            <div class="row-start-1 row-end-3 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white w-full h-full p-6 flex flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50 cursor-pointer">
+                    <h3 class="text-2xl mb-3">Native Notifications</h3>          
+                    <img src="./assets/asset 28.png" alt="">
+                </div>
+            </div>
+            <div class="row-start-3 row-end-6 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white w-full h-full p-6 flex flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50 cursor-pointer">
+                    <h3 class="text-2xl mb-3">Native Notifications</h3>
+                    <p class="text-lg text-center font-light mb-3">We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.</p>
+                    <img src="./assets/asset 28.png" alt="">
+                </div>
+            </div>
+            <div class="row-start-4 row-end-6 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white w-full h-full p-6 flex flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50 cursor-pointer">
+                    <h3 class="text-2xl mb-3">Native Notifications</h3>
+                    <img src="./assets/asset 31.png" alt="">
+                </div>
+            </div>
+            <div class="row-start-3 row-end-6 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white w-full h-full p-6 flex flex-col items-center hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50 cursor-pointer">
+                    <h3 class="text-2xl mb-3">Native Notifications</h3>
+                    <p class="text-lg text-center font-light mb-3">We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.</p>
+                    <img src="./assets/asset 30.png" alt="">
+                </div>
+            </div>
+            
         </div>
       </div>
+      <!-- Marquee line  -->
+      <div id="features-line" class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32">
+        <div class="border rounded-lg overflow-hidden flex justify-center p-4">
+            <div id="line4" class="flex gap-8 p-6">
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Osteoporosis</h3>
+                <span>•</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Sports Injuries</h3>
+                <span>•</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Slip Disc</h3>
+                <span>•</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Osteoporosis</h3>
+                <span>•</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Sports Injuries</h3>
+                <span>•</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Slip Disc</h3>
+                <span>•</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Osteoporosis</h3>
+                <span>•</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Sports Injuries</h3>
+                <span>•</span>
+                <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Slip Disc</h3>
+                <span>•</span>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonials  -->
+    <div id="testimonials" class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32">
+        <h2 class="text-5xl sm:font-semibold mb-14">Customer stories</h2>
+        <div class="rounded-xl border flex flex-col lg:flex-row items-end">
+            <div class="flex flex-col gap-12 p-8">
+                <div class="h-4 w-fit">
+                    <img src="./assets/asset 32.svg" alt="">
+                </div>
+                <h3 class="text-xl leading-relaxed">ClickUp used Physiofit to get their desktop app in front of customers in days instead of months.</h3>
+                <div id="tag-container" class="flex gap-3 flex-wrap">
+                    <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="font-display font-medium">Chromeless UI</span>
+                    </div>
+                    <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="font-display font-medium">Native spellcheck</span>
+                    </div>
+                    <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="font-display font-medium">Task time in menubar</span>
+                    </div>
+                    <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="font-display font-medium">Notification count in the dock</span>
+                    </div>
+                    <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="font-display font-medium">Global hotkey to create task</span>
+                    </div>
+                </div>
+                <p class="text-lg font-light text-gray-500">“Physiofit provided us with a <span class="text-gray-800">polished desktop app</span> in no time. Their expert team guided us through a smooth migration from our outdated legacy desktop app, enabling us to deliver <span class="text-gray-800">new and improved features</span> to our customers within days.”</p>
+                <div id="user-card" class="flex gap-4">
+                    <div class="w-12">
+                        <img src="./assets/asset 33.jpeg" class="rounded-full" alt="">
+                    </div>
+                    <div class="flex flex-col">
+                        <h3>Zeb Evans</h3>
+                        <p class="text-gray-500">Founder & CEO, <a href="#" class="border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-500;">ClickUp</a> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-10">
+                <img src="./assets/webscrn.png" class="pl-12" alt="">
+            </div>
+        </div>
+        <div class="flex flex-col lg:flex-row justify-between gap-4 mt-6">
+            <div class="rounded-2xl p-[1px] bg-slate-200 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200; group">
+                <div class="rounded-2xl p-6 bg-slate-50 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50; flex flex-col gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">User Review</h3>
+                    </div>
+                    <p class="text-lg font-light">I recently had a sports injury and was looking for an app to guide me through my recovery. PhysioFit has been a game-changer! The exercises are easy to follow, and I love how the app customizes the routines based on my progress. My recovery has been much smoother, and I feel stronger every day. Highly recommend it to anyone needing physiotherapy support!</p>
+                    <div class="flex gap-4">
+                        <div class="flex">
+                            <div class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                                <img src="./assets/cust3.jpeg" class="min-w-16 min-h-16" alt="">
+                            </div>
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                <img src="./assets/cust1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3>Rick Pastoor</h3>
+                            <a href="#" class="anchor-hover w-fit text-gray-500">Rise</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="rounded-2xl p-[1px] bg-slate-200 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200; group">
+                <div class="rounded-2xl p-6 bg-slate-50 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50; flex flex-col gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">User Review</h3>
+                    </div>
+                    <p class="text-lg font-light">As someone with osteoporosis, finding the right exercises that are both safe and effective has been challenging. PhysioFit provides a fantastic range of exercises tailored specifically for my condition. The step-by-step instructions and video demonstrations are incredibly helpful. My overall mobility and strength have improved significantly since I started using this app</p>
+                    <div class="flex gap-4">
+                        <div class="flex">
+                            <div class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                                <img src="./assets/cust4.jpeg" class="min-w-16 min-h-16" alt="">
+                            </div>
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                <img src="./assets/cust2.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3>Rick Pastoor</h3>
+                            <a href="#" class="anchor-hover w-fit text-gray-500">Rise</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="rounded-2xl p-[1px] bg-slate-200 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200; group">
+                <div class="rounded-2xl p-6 bg-slate-50 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50; flex flex-col gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">User Review</h3>
+                    </div>
+                    <p class="text-lg font-light">After my slip disc, I needed a reliable and user-friendly tool to assist with my rehabilitation. PhysioFit has exceeded my expectations. The app is intuitive, and the personalized exercise plans have helped me regain my strength and coordination. The progress tracking feature keeps me motivated, and I appreciate the focus on my specific needs.</p>
+                    <div class="flex gap-4">
+                        <div class="flex">
+                            <div class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white">
+                                <img src="./assets/cust5.jpg" class="min-w-16 min-h-16" alt="">
+                            </div>
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-white">
+                                <img src="./assets/asset 36.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3>Rick Pastoor</h3>
+                            <a href="#" class="anchor-hover w-fit text-gray-500">Rise</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="rounded-2xl flex flex-col bg-black lg:flex-row mt-12 pt-6 lg:pt-10">
+            <div class="flex flex-col gap-4 p-8 lg:flex-1 lg:gap-8">
+                <span class="text-gray-400 font-display font-medium">READY TO START BUILDING?</span>
+                <h2 class="text-4xl text-white leading-tight lg:text-5xl">Create your desktop app for free*</h2>
+                <p class="text-lg font-light text-gray-400 lg:text-xl">Physiofit Builder will take you step-by-step through the process of creating your first desktop app in just a few minutes.</p>
+                <button class="bg-blue-700 text-white py-3 rounded-lg hover:bg-opacity-90 flex justify-center items-center gap-4">
+                    <i class="fa-solid fa-download "></i>
+                    <span>Download Physiofit</span>
+                </button>
+                <p class="text-gray-400 text-xs italic leading-tight">*You can create a desktop app and run it on your computer for free. You will only be charged if you want to create a distributable app for your customers.</p>
+            </div>
+            <div class="lg:w-1/2">
+                <img src="./assets/webscrn.png" class="pl-12" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- FAQs  -->
+    <div id="faq" class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-10;">
+        <h2 class="text-5xl leading-normal sm:font-semibold max-w-2xl;">FAQs</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 mt-6 gap-6 items-start">
+            <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-1">
+                    <p class="font-semibold text-lg">Is Physiofit For Me?</p>
+                    <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                </dt>
+                <dd id="faq-1" class="hidden text-lg font-light mt-6">
+                    <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then Physiofit is for you.</p>
+                </dd>
+            </div>
+            <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                <dt class="flex justify-between items-center" aria-controls="faq-2">
+                    <p class="font-semibold text-lg">Is Physiofit For Me?</p>
+                    <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                </dt>
+                <dd id="faq-2" class="hidden text-lg font-light mt-6">
+                    <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then Physiofit is for you.</p>
+                </dd>
+            </div>
+            <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-3">
+                    <p class="font-semibold text-lg">Is Physiofit For Me?</p>
+                    <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                </dt>
+                <dd id="faq-3" class="hidden text-lg font-light mt-6">
+                    <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then Physiofit is for you.</p>
+                </dd>
+            </div>
+            <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                <dt class="flex justify-between items-center" aria-controls="faq-4">
+                    <p class="font-semibold text-lg">Is Physiofit For Me?</p>
+                    <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                </dt>
+                <dd id="faq-4" class="hidden text-lg font-light mt-6">
+                    <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then Physiofit is for you.</p>
+                </dd>
+            </div>
+            <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-5">
+                    <p class="font-semibold text-lg">Is Physiofit For Me?</p>
+                    <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                </dt>
+                <dd id="faq-5" class="hidden text-lg font-light mt-6">
+                    <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then Physiofit is for you.</p>
+                </dd>
+            </div>
+            <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                <dt class="flex justify-between items-center" aria-controls="faq-6">
+                    <p class="font-semibold text-lg">Is Physiofit For Me?</p>
+                    <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                </dt>
+                <dd id="faq-6" class="hidden text-lg font-light mt-6">
+                    <p>That depends! If you would like to distribute your web app to your users as a downloadable desktop app then Physiofit is for you.</p>
+                </dd>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Footer  -->
+<footer class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-10;">
+    <div class="rounded-lg border lg:border-none lg:bg-gray-50 bg-gray-50 flex flex-col lg:flex-row-reverse items-center px-8 py-12 gap-8">
+        <a href="#" class="font-light font-display">Documentation</a>
+        <div class="flex gap-8 text-lg">
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+            <img class="object-cover max-w-12 max-h-12" src="./assets/asset 0.png" alt="Logo">
+            <span class="text-lg font-medium font-display">Physiofit</span>
+        </a>
+    </div>
+    <div id="sub-footer" class="flex flex-col gap-6 items-center justify-center my-12">
+        <div class="flex gap-2 items-center ">
+            <img class="w-4 h-4" src="./assets/asset 37.svg" alt="Y-combinator">
+            <p class="text-sm text-gray-600">A Y Combinator company.</p>
+        </div>
+        <p class="text-sm text-gray-400">© 2024 Physiofit, Inc. All rights reserved.</p>
+    </div>
+</footer>
 
-     <div class="h-[1000px]"></div>
+     <!-- <div class="h-[1000px]"></div> -->
       
 </body>
 <script src="script.js"></script>
