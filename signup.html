@@ -9,11 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css stylesheet -->
     <link rel="stylesheet" href="signup.css">
+    <link rel="shortcut icon" href="assets/asset 0.png" type="image/x-icon">
 </head>
 <body>
-    <!-- <button onclick="login()">Login</button>
-    <button onclick="logout()">Logout</button> -->
-
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form id="register-form">
@@ -65,12 +63,12 @@
                 <div class="overlay-panel overlay-left">
                     <h1>Welcome Back!</h1>
                     <p>To keep connected with us please login with your personal info</p>
-                    <button>Sign In</button>
+                    <button id="sign-in-btn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Hello, Friend!</h1>
                     <p>Enter your personal details and start journey with us</p>
-                    <button>Sign Up</button>
+                    <button id="sign-up-btn">Sign Up</button>
                 </div>
             </div>
             <button id="overlayBtn"></button>
@@ -90,9 +88,54 @@
                 overlayBtn.classList.add('btnScaled');
             });
         });
-    </script>
-    <!-- <script src="signup.js"></script>
-    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.19/auth0-spa-js.production.js"></script> -->
 
+        // Handle form submissions
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Here you would normally handle the login (e.g., validate credentials, call API)
+            // For this example, we'll just redirect to profile.html
+            window.location.href = 'profile.html';
+        });
+
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Here you would normally handle the registration (e.g., validate inputs, call API)
+            // For this example, we'll just alert success
+            alert('Registration successful! Please sign in.');
+        });
+
+        // Handle button clicks to switch between sign-in and sign-up
+        document.getElementById('sign-in-btn').addEventListener('click', () => {
+            container.classList.remove('right-panel-active');
+        });
+
+        document.getElementById('sign-up-btn').addEventListener('click', () => {
+            container.classList.add('right-panel-active');
+ });
+
+ document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+        
+        if (email && password) {
+            const name = email.split('@')[0]; // Extract name from email
+            const streak = Math.floor(Math.random() * 10) + 1; // Random streak between 1 and 10 days
+            const progress = Math.floor(Math.random() * 100) + 1; // Random progress between 1% and 100%
+
+            // Store data in local storage
+            localStorage.setItem('userName', name);
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userStreak', streak);
+            localStorage.setItem('userProgress', progress);
+
+            // Redirect to profile page
+            window.location.href = 'profile.html';
+        } else {
+            alert('Please enter both email and password.');
+        }
+    });
+    </script>
 </body>
 </html>

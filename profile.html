@@ -1,1 +1,206 @@
-<h1>Profile</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="assets/asset 0.png" type="image/x-icon">
+    <title>Tailwind project</title>
+</head>
+<body class="overflow-x-hidden scroll-smooth">
+    <!-- Navbar  -->
+    <nav class="p-3 flex justify-between items-center bg-white">
+        <a href="#" id="brand" class="flex gap-2 items-center">
+            <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Navbar logo">
+            <span class="text-lg font-medium font-poppins">Physiofit</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="index.html" class="font-medium hover:text-primary">Home</a>
+            <a href="#steps" class="font-medium hover:text-primary">Exercises</a>
+            <a href="products.html" class="font-medium hover:text-primary">Products</a>
+            <a href="signup.html" class="font-medium hover:text-primary">Signup</a>
+            <a href="signup.html" class="font-medium hover:text-primary">Signin</a>
+        </div>
+         <button class="hidden lg:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600 hover:-translate-y-1 transition group"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
+            <img src="assets/asset 1.svg" alt="">
+            <span>Consult doctors</span>
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+        </button>
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- Nav dialog  -->
+        <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3 md:hidden">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Navbar logo">
+                    <span class="text-lg font-medium font-poppins">Digiphysio</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+            <a href="index.html" class="font-medium hover:text-primary block m-3 p-3">Home</a>
+            <a href="#steps" class="font-medium hover:text-primary block m-3 p-3">Exercises</a>
+            <a href="products.html" class="font-medium hover:text-primary block m-3 p-3">Changelog</a>
+            <a href="signup.html" class="font-medium hover:text-primary block m-3 p-3">Signup</a>
+            <a href="signup.html" class="font-medium hover:text-primary block m-3 p-3">Signin</a>
+            </div>
+            <div class="h-[1px] bg-gray-300"></div>
+            <button class="ml-5 mt-6 flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
+                <img src="assets/asset 1.svg" alt="">
+                <span>Consult Doctors</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="assets/asset 0.png" type="image/x-icon">
+    <title>Tailwind project</title>
+</head>
+<body class="overflow-x-hidden scroll-smooth">
+    <!-- Navbar  -->
+    <nav class="p-3 flex justify-between items-center bg-white">
+        <!-- Navbar content -->
+    </nav>
+
+    <div class="ml-28 mr-28 mt-12">
+        <div class="bg-white overflow-hidden shadow rounded-lg border">
+            <div class="px-4 py-5 sm:px-6">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                    User Profile
+                </h3>
+                <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                    This is some information about the user.
+                </p>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
+                <dl class="sm:divide-y sm:divide-gray-200">
+                    <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            Full name
+                        </dt>
+                        <dd id="profile-name" class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            <!-- Full name will be inserted here -->
+                        </dd>
+                    </div>
+                    <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            Email address
+                        </dt>
+                        <dd id="profile-email" class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            <!-- Email will be inserted here -->
+                        </dd>
+                    </div>
+                    <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            Streak
+                        </dt>
+                        <dd id="profile-streak" class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            <!-- Streak will be inserted here -->
+                        </dd>
+                    </div>
+                    <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            Progress
+                        </dt>
+                        <dd id="profile-progress" class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            <!-- Progress will be inserted here -->
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer  -->
+    <footer class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-10;">
+        <!-- Footer content -->
+    </footer>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Retrieve the email and name from local storage
+        const email = localStorage.getItem('userEmail');
+        
+        // Display the retrieved data in the profile section
+        if (email) {
+            document.getElementById('profile-email').textContent = email;
+        }
+
+        // Generate random numbers for streak and progress
+        const streak = Math.floor(Math.random() * 30) + 1; // Random streak between 1 and 30 days
+        const progress = Math.floor(Math.random() * 100) + 1; // Random progress between 1% and 100%
+
+        document.getElementById('profile-streak').textContent = `${streak} days`;
+        document.getElementById('profile-progress').textContent = `${progress}%`;
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const userName = localStorage.getItem('userName');
+        const userEmail = localStorage.getItem('userEmail');
+        const userStreak = localStorage.getItem('userStreak');
+        const userProgress = localStorage.getItem('userProgress');
+
+        if (userName && userEmail && userStreak && userProgress) {
+            document.getElementById('profile-name').textContent = userName;
+            document.getElementById('profile-email').textContent = userEmail;
+            document.getElementById('profile-streak').textContent = `${userStreak} days`;
+            document.getElementById('profile-progress').textContent = `${userProgress}%`;
+        } else {
+            alert('No user information found. Please sign in.');
+            window.location.href = 'signup.html';
+        }
+    });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer  -->
+<footer class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-10;">
+    <div class="rounded-lg border lg:border-none lg:bg-gray-50 bg-gray-50 flex flex-col lg:flex-row-reverse items-center px-8 py-12 gap-8">
+        <a href="#" class="font-light font-display">Documentation</a>
+        <div class="flex gap-8 text-lg">
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+            <img class="object-cover max-w-12 max-h-12" src="./assets/asset 0.png" alt="Logo">
+            <span class="text-lg font-medium font-display">Physiofit</span>
+        </a>
+    </div>
+    <div id="sub-footer" class="flex flex-col gap-6 items-center justify-center my-12">
+        <div class="flex gap-2 items-center ">
+            <img class="w-4 h-4" src="./assets/asset 37.svg" alt="Y-combinator">
+            <p class="text-sm text-gray-600">A Y Combinator company.</p>
+        </div>
+        <p class="text-sm text-gray-400">© 2024 Physiofit, Inc. All rights reserved.</p>
+    </div>
+</footer>
+
+     <!-- <div class="h-[1000px]"></div> -->
+      
+</body>
+<script src="script.js"></script>
+</html>

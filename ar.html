@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="assets/asset 0.png" type="image/x-icon">
+    <title>Physiofit</title>
+    <style>
+        .video-container {
+            display: none;
+        }
+        .video-container.show {
+            display: block;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden scroll-smooth">
+    <!-- Navbar  -->
+    <nav class="p-3 flex justify-between items-center bg-white">
+        <a href="#" id="brand" class="flex gap-2 items-center">
+            <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Navbar logo">
+            <span class="text-lg font-medium font-poppins">Physiofit</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="index.html" class="font-medium hover:text-primary">Home</a>
+            <a href="#steps" class="font-medium hover:text-primary">Exercises</a>
+            <a href="products.html" class="font-medium hover:text-primary">Products</a>
+            <a href="signup.html" class="font-medium hover:text-primary">Signup</a>
+            <a href="signup.html" class="font-medium hover:text-primary">Signin</a>
+        </div>
+         <button class="hidden lg:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600 hover:-translate-y-1 transition group"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
+            <img src="assets/asset 1.svg" alt="">
+            <span>Consult doctors</span>
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+        </button>
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- Nav dialog  -->
+        <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3 md:hidden">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Navbar logo">
+                    <span class="text-lg font-medium font-poppins">Digiphysio</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+            <a href="index.html" class="font-medium hover:text-primary block m-3 p-3">Home</a>
+            <a href="#steps" class="font-medium hover:text-primary block m-3 p-3">Exercises</a>
+            <a href="products.html" class="font-medium hover:text-primary block m-3 p-3">Changelog</a>
+            <a href="signup.html" class="font-medium hover:text-primary block m-3 p-3">Signup</a>
+            <a href="signup.html" class="font-medium hover:text-primary block m-3 p-3">Signin</a>
+            </div>
+            <div class="h-[1px] bg-gray-300"></div>
+            <button class="ml-5 mt-6 flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
+                <img src="assets/asset 1.svg" alt="">
+                <span>Consult Doctors</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </nav>
+
+    <h1 class="text-6xl font-bold text-center mt-10">Make Shifter (Gamify Version)</h1>
+
+    <div class="flex space-x-4 p-6 bg-slate-50 rounded-lg mt-14 ml-12 mr-12 border border-black">
+        <!-- Images Column -->
+        <div class="flex flex-col space-y-4">
+            <img src="assets/dbl.jpeg" alt="Image 1" class="cursor-pointer hover:opacity-80 transition-opacity" onclick="toggleVideo('video1')">
+            <img src="https://via.placeholder.com/150" alt="Image 2" class="cursor-pointer hover:opacity-80 transition-opacity" onclick="toggleVideo('video2')">
+            <img src="https://via.placeholder.com/150" alt="Image 3" class="cursor-pointer hover:opacity-80 transition-opacity" onclick="toggleVideo('video3')">
+        </div>
+
+        <!-- Video Container -->
+        <div class="flex-grow">
+            <div id="video1" class="video-container p-4">
+                <video muted autoplay loop class="w-32 h-auto">
+                    <source src="assets/bottleanimation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div id="video2" class="video-container p-4">
+                <video controls class="w-full h-auto">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div id="video3" class="video-container p-4">
+                <video controls class="w-full h-auto">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <!-- Footer  -->
+<footer class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-10;">
+    <div class="rounded-lg border lg:border-none lg:bg-gray-50 bg-gray-50 flex flex-col lg:flex-row-reverse items-center px-8 py-12 gap-8">
+        <a href="#" class="font-light font-display">Documentation</a>
+        <div class="flex gap-8 text-lg">
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+            <img class="object-cover max-w-12 max-h-12" src="./assets/asset 0.png" alt="Logo">
+            <span class="text-lg font-medium font-display">Physiofit</span>
+        </a>
+    </div>
+    <div id="sub-footer" class="flex flex-col gap-6 items-center justify-center my-12">
+        <div class="flex gap-2 items-center ">
+            <img class="w-4 h-4" src="./assets/asset 37.svg" alt="Y-combinator">
+            <p class="text-sm text-gray-600">A Y Combinator company.</p>
+        </div>
+        <p class="text-sm text-gray-400">© 2024 Physiofit, Inc. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script>
+        function toggleVideo(videoId) {
+            // Hide all videos
+            document.querySelectorAll('.video-container').forEach(container => {
+                if (container.id !== videoId) {
+                    container.classList.remove('show');
+                }
+            });
+
+            // Toggle the clicked video
+            const video = document.getElementById(videoId);
+            video.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
