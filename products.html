@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+    <title>Tailwind project</title>
+</head>
+<body class="overflow-x-hidden scroll-smooth">
+    <!-- Navbar  -->
+    <nav class="p-3 flex justify-between items-center bg-white">
+        <a href="#" id="brand" class="flex gap-2 items-center">
+            <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Navbar logo">
+            <span class="text-lg font-medium font-poppins">Physiofit</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="index.html" class="font-medium hover:text-primary">Home</a>
+            <a href="#steps" class="font-medium hover:text-primary">Exercises</a>
+            <!-- <a href="#" class="font-medium hover:text-primary">Changelog</a> -->
+            <a href="signup.html" class="font-medium hover:text-primary">Signup</a>
+            <a href="signup.html" class="font-medium hover:text-primary">Signin</a>
+        </div>
+         <button class="hidden lg:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600 hover:-translate-y-1 transition group"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
+            <img src="assets/asset 1.svg" alt="">
+            <span>Consult doctors</span>
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+        </button>
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- Nav dialog  -->
+        <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3 md:hidden">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Navbar logo">
+                    <span class="text-lg font-medium font-poppins">Digiphysio</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+            <a href="index.html" class="font-medium hover:text-primary block m-3 p-3">Home</a>
+            <a href="#steps" class="font-medium hover:text-primary block m-3 p-3">Exercises</a>
+            <!-- <a href="#" class="font-medium hover:text-primary block m-3 p-3">Changelog</a> -->
+            <a href="signup.html" class="font-medium hover:text-primary block m-3 p-3">Signup</a>
+            <a href="signup.html" class="font-medium hover:text-primary block m-3 p-3">Signin</a>
+            </div>
+            <div class="h-[1px] bg-gray-300"></div>
+            <button class="ml-5 mt-6 flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
+                <img src="assets/asset 1.svg" alt="">
+                <span>Consult Doctors</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </nav>
+     
+    <!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+<div class="bg-white">
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <h2 class="sr-only">Products</h2>
+  
+      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="assets/BosuBall.jpeg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Bosu Ball</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹2,800&nbsp;<strike>₹3,800</strike></p>
+        </a>
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="assets/ColdPack.jpeg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Cold Pack</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹350&nbsp;<strike>₹400</strike></p>
+        </a>
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="assets/GymCycle.jpeg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Exercise Bike</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹7,220&nbsp;<strike>₹19,299</strike></p>
+        </a>
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="assets/ankleExerciser.webp" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Ankle Exerciser</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹1,500&nbsp;<strike>₹2,500</strike></p>
+        </a>
+  
+        <!-- More products... -->
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="bg-white">
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <h2 class="sr-only">Products</h2>
+  
+      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="assets/PullupBar.jpeg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Pullup Bar</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹1,423&nbsp;<strike>₹2,799</strike></p>
+        </a>
+        <a href="#" class="group">
+          <div class="h-[280px] aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="assets/InversionTable.jpeg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Inversion Table</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹11,999&nbsp;<strike>₹14,999</strike></p>
+        </a>
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="assets/Accupunctoreum.webp" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Accupunctoreum</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹150&nbsp;<strike>₹400</strike></p>
+        </a>
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="assets/footmassage.webp" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Foot Massager</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹350&nbsp;<strike>₹599</strike></p>
+        </a>
+  
+        <!-- More products... -->
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+ <!-- Footer  -->
+    <footer class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-10;">
+        <div class="rounded-lg border lg:border-none lg:bg-gray-50 bg-gray-50 flex flex-col lg:flex-row-reverse items-center px-8 py-12 gap-8">
+            <a href="#" class="font-light font-display">Documentation</a>
+            <div class="flex gap-8 text-lg">
+                <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+                <img class="object-cover max-w-12 max-h-12" src="./assets/asset 0.png" alt="Logo">
+                <span class="text-lg font-medium font-display">Physiofit</span>
+            </a>
+        </div>
+        <div id="sub-footer" class="flex flex-col gap-6 items-center justify-center my-12">
+            <div class="flex gap-2 items-center ">
+                <img class="w-4 h-4" src="./assets/asset 37.svg" alt="Y-combinator">
+                <p class="text-sm text-gray-600">A Y Combinator company.</p>
+            </div>
+            <p class="text-sm text-gray-400">© 2024 Physiofit, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    
+         <!-- <div class="h-[1000px]"></div> -->
+          
+    </body>
+    <script src="script.js"></script>
+    </html>

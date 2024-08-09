@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+    <title>Tailwind project</title>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navbar  -->
+    <nav class="p-3 flex justify-between items-center bg-white">
+        <a href="#" id="brand" class="flex gap-2 items-center">
+            <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Navbar logo">
+            <span class="text-lg font-medium font-poppins">Physiofit</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="index.html" class="font-medium hover:text-primary">Home</a>
+            <a href="#steps" class="font-medium hover:text-primary">Exercises</a>
+            <!-- <a href="#" class="font-medium hover:text-primary">Changelog</a> -->
+            <a href="signup.html" class="font-medium hover:text-primary">Signup</a>
+            <a href="signup.html" class="font-medium hover:text-primary">Signin</a>
+        </div>
+         <button class="hidden lg:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600 hover:-translate-y-1 transition group"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
+            <img src="assets/asset 1.svg" alt="">
+            <span>Consult doctors</span>
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+        </button>
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- Nav dialog  -->
+        <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3 md:hidden">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Navbar logo">
+                    <span class="text-lg font-medium font-poppins">Digiphysio</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+            <a href="index.html" class="font-medium hover:text-primary block m-3 p-3">Home</a>
+            <a href="#steps" class="font-medium hover:text-primary block m-3 p-3">Exercises</a>
+            <!-- <a href="#" class="font-medium hover:text-primary block m-3 p-3">Changelog</a> -->
+            <a href="signup.html" class="font-medium hover:text-primary block m-3 p-3">Signup</a>
+            <a href="signup.html" class="font-medium hover:text-primary block m-3 p-3">Signin</a>
+            </div>
+            <div class="h-[1px] bg-gray-300"></div>
+            <button class="ml-5 mt-6 flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"> <!--Pehle ye hidden rahega aur screen size jaise hi medium se bada hoga to ye show hoga  -->
+                <img src="assets/asset 1.svg" alt="">
+                <span>Consult Doctors</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </nav>
+
+    <h1 class="text-6xl font-bold text-center mt-10 bg-blue-200 w-fit m-auto rounded-lg p-5">Exercises for Sports Injury Recovery</h1>
+    <!-- Mild  -->
+    <div id="main-exercises" class="bg-green-50 rounded-xl border flex flex-col gap-6 px-6 py-12 max-w-7xl mt-16 mx-auto md:px-8 md:mt-22">
+        <div id="mild" class="flex flex-col p-4">
+            <h1 class="text-5xl font-bold font-poppins p-2">Mild <span class="text-5xl font-light">&nbsp;(Hamstring stretch)</span></h1>
+            <p class="font-light text-2xl font-poppins p-2 mb-4">Mild pain, slight swelling, and possibly some stiffness. The athlete may experience discomfort but can usually continue with activities, though at a reduced intensity.</p>
+            <video controls src="assets/sports-mild.mov" class="items-center max-w-2xl m-auto border border-black rounded-xl mb-6"></video>
+            
+            <!-- Progress Bar -->
+    <div class="w-1/2 bg-gray-200 rounded-full h-4 mb-4 m-auto">
+        <div id="progress-bar-mild" class="bg-blue-600 h-4 rounded-full" style="width: 0%;"></div>
+    </div>
+
+    <!-- Checkboxes -->
+    <div class="space-y-6 m-auto border p-6 rounded-lg bg-green-200">
+        <div>
+            <input type="checkbox" id="checkbox1" class="checkbox-mild" />
+            <label for="checkbox-mild-1" class="ml-2">Rep 1</label>
+        </div>
+        <div>
+            <input type="checkbox" id="checkbox2" class="checkbox-mild" />
+            <label for="checkbox-mild-2" class="ml-2">Rep 2</label>
+        </div>
+        <div>
+            <input type="checkbox" id="checkbox3" class="checkbox-mild" />
+            <label for="checkbox-mild-3" class="ml-2">Rep 3</label>
+        </div>
+    </div>
+
+            
+
+        </div>
+    </div>
+
+
+    <!-- moderate  -->
+    <div id="main-exercises" class="bg-yellow-50 rounded-xl border flex flex-col gap-6 px-6 py-12 max-w-7xl mt-16 mx-auto md:px-8 md:mt-32">
+        <div id="mild" class="flex flex-col p-4">
+            <h1 class="text-5xl font-bold font-poppins p-2">Moderate<span class="text-5xl font-light">&nbsp;(Isometric knee flex./ext. 45°)</span></h1>
+            <p class="font-light text-2xl font-poppins p-2 mb-4">Moderate pain, noticeable swelling, bruising, and limited range of motion. The athlete may have difficulty performing usual activities.</p>
+            <video controls src="assets/sports-moderate.mov" class="items-center max-w-2xl m-auto border border-black rounded-xl mb-6"></video>
+            
+
+            <!-- Progress Bar -->
+    <div class="w-1/2 bg-gray-200 rounded-full h-4 mb-4 m-auto">
+        <div id="progress-bar-moderate" class="bg-blue-600 h-4 rounded-full" style="width: 0%;"></div>
+    </div>
+
+    <!-- Checkboxes -->
+    <div class="space-y-6 m-auto border p-6 rounded-lg bg-yellow-200">
+        <div>
+            <input type="checkbox" id="checkbox1" class="checkbox-moderate" />
+            <label for="checkbox1" class="ml-2">Rep 1</label>
+        </div>
+        <div>
+            <input type="checkbox" id="checkbox2" class="checkbox-moderate" />
+            <label for="checkbox2" class="ml-2">Rep 2</label>
+        </div>
+        <div>
+            <input type="checkbox" id="checkbox3" class="checkbox-moderate" />
+            <label for="checkbox3" class="ml-2">Rep 3</label>
+        </div>
+    </div>
+
+</div>
+</div>
+
+    <!-- severe  -->
+    <div id="main-exercises" class="bg-red-50 rounded-xl border flex flex-col gap-6 px-6 py-12 max-w-7xl mt-16 mx-auto md:px-8 md:mt-32">
+        <div id="mild" class="flex flex-col p-4">
+            <h1 class="text-5xl font-bold font-poppins p-2">Severe<span class="text-5xl font-light">&nbsp;(Partial squat)</span></h1>
+            <p class="font-light text-2xl font-poppins p-2 mb-4">Severe pain, significant swelling, instability in the affected area, inability to move the injured part, and possibly visible deformity.</p>
+            <video controls src="assets/sports-severe.mov" class="items-center max-w-2xl m-auto border border-black rounded-xl mb-6"></video>
+            
+
+            <!-- Progress Bar -->
+    <div class="w-1/2 bg-gray-200 rounded-full h-4 mb-4 m-auto">
+        <div id="progress-bar-severe" class="bg-blue-600 h-4 rounded-full" style="width: 0%;"></div>
+    </div>
+
+    <!-- Checkboxes -->
+    <div class="space-y-6 m-auto border p-6 rounded-lg bg-red-200">
+        <div>
+            <input type="checkbox" id="checkbox1" class="checkbox-severe" />
+            <label for="checkbox1" class="ml-2">Rep 1</label>
+        </div>
+        <div>
+            <input type="checkbox" id="checkbox2" class="checkbox-severe" />
+            <label for="checkbox2" class="ml-2">Rep 2</label>
+        </div>
+        <div>
+            <input type="checkbox" id="checkbox3" class="checkbox-severe" />
+            <label for="checkbox3" class="ml-2">Rep 3</label>
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Footer  -->
+<footer class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-10;">
+    <div class="rounded-lg border lg:border-none lg:bg-gray-50 bg-gray-50 flex flex-col lg:flex-row-reverse items-center px-8 py-12 gap-8">
+        <a href="#" class="font-light font-display">Documentation</a>
+        <div class="flex gap-8 text-lg">
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+            <img class="object-cover max-w-12 max-h-12" src="./assets/asset 0.png" alt="Logo">
+            <span class="text-lg font-medium font-display">Physiofit</span>
+        </a>
+    </div>
+    <div id="sub-footer" class="flex flex-col gap-6 items-center justify-center my-12">
+        <div class="flex gap-2 items-center ">
+            <img class="w-4 h-4" src="./assets/asset 37.svg" alt="Y-combinator">
+            <p class="text-sm text-gray-600">A Y Combinator company.</p>
+        </div>
+        <p class="text-sm text-gray-400">© 2024 Physiofit, Inc. All rights reserved.</p>
+    </div>
+</footer>
+
+     <!-- <div class="h-[1000px]"></div> -->
+      <!-- JavaScript -->
+    <script>
+    // Function to update progress bar for Mild section
+    function updateProgressBar(section, progressBarId, checkboxClass) {
+        const checkboxes = document.querySelectorAll(`.${checkboxClass}`);
+        const progressBar = document.getElementById(progressBarId);
+        let checkedCount = 0;
+
+        checkboxes.forEach((checkbox) => {
+            if (checkbox.checked) {
+                checkedCount++;
+            }
+        });
+
+        const progressPercentage = (checkedCount / checkboxes.length) * 100;
+        progressBar.style.width = `${progressPercentage}%`;
+    }
+
+    // Event listeners for Mild checkboxes
+    document.querySelectorAll('.checkbox-mild').forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+            updateProgressBar('Mild', 'progress-bar-mild', 'checkbox-mild');
+        });
+    });
+
+    // Event listeners for Moderate checkboxes
+    document.querySelectorAll('.checkbox-moderate').forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+            updateProgressBar('Moderate', 'progress-bar-moderate', 'checkbox-moderate');
+        });
+    });
+
+    // Event listeners for Severe checkboxes
+    document.querySelectorAll('.checkbox-severe').forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+            updateProgressBar('Severe', 'progress-bar-severe', 'checkbox-severe');
+        });
+    });
+    </script>
+      
+</body>
+<script src="script.js"></script>
+</html>
